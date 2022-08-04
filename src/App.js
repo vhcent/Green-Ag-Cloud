@@ -5,10 +5,10 @@ import Sidebar from "./components/sidebar/Sidebar.jsx";
 function App() {
     return (
         <div className="App">
+            <Sidebar />
             <div className="main">
                 <Navbar />
             </div>
-            <Sidebar />
         </div>
     );
 }
