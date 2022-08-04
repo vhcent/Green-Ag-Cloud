@@ -1,8 +1,8 @@
 .navbar {
-    position: absolute;
-    left: 255px;
+    /* position: absolute; */
+    /* left: 255px; */
     height: 90px;
-    width: calc(100% - 255px);
+    /* width: calc(100% - 255px); */
     display: flex;
     align-items: center;
 }
@@ -22,7 +22,7 @@
     align-items: center;
     color: #151c15;
     opacity: 0.7;
-    margin-left: 6%;
+    margin-left: 5%;
     vertical-align: middle;
 }
 
