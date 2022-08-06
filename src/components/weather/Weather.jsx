@@ -1,5 +1,6 @@
 import "./Weather.css";
 import { useEffect, useState } from "react";
+import "./Weather.css"
 
 export default function Weather() {
     const [data, setData] = useState(null);
@@ -37,11 +38,11 @@ export default function Weather() {
     return (isLoading ? <div>Loading...</div> :
         <div className="weather-card">
             <div className="weather-header">
-                {data.name}
-                {`${data.main.temp.toFixed(2)}°F`}
+                <div id="weatherTitle">{data.name}</div>
+                <div id="weatherTemp">{`${data.main.temp.toFixed(2)}°F`}</div>
             </div>
-            <div className="weather-description">
-                <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="weather-icon" />
+            <div className="weather-content">
+                <img id="weatherIcon" src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="weather-icon" />
                 {data.weather[0].description}
             </div>
         </div>)
