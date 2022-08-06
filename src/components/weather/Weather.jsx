@@ -35,7 +35,7 @@ export default function Weather() {
         fetchWeatherData();
     }, [cityName]);
 
-    return (isLoading ? <div>Loading...</div> :
+    return (isLoading ? <></> :
         <div className="weather-card">
             <div className="weather-header">
                 <div id="weatherTitle">{data.name}</div>
