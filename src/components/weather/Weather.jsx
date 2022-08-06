@@ -2,8 +2,9 @@ import "./Weather.css";
 import { useEffect, useState } from "react";
 
 export default function Weather() {
-    const [data, setData] = useState();
+    const [data, setData] = useState(null);
     const [cityName, setCityName] = useState("San Jose");
+    const [isLoading, setIsLoading] = useState(true);
 
     //Fetch weather Data
     const fetchWeatherData = () => {
@@ -14,6 +15,7 @@ export default function Weather() {
         )
             .then((res) => res.json())
             .then((json) => {
+                setIsLoading(false);
                 console.log(json);
                 return setData(json);
             })
@@ -32,16 +34,16 @@ export default function Weather() {
         fetchWeatherData();
     }, [cityName]);
 
-    return (
+    return (isLoading ? <div>Loading...</div> :
         <div className="weather-card">
-            <div className="weather-top">
-                {cityName.toUpperCase()}
+            <div className="weather-header">
+                {data.name}
                 {`${data.main.temp.toFixed(2)}°F`}
             </div>
             <div className="weather-description">
                 <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="weather-icon" />
                 {data.weather[0].description}
             </div>
-        </div>
-    );
+        </div>)
+        ;
 }
