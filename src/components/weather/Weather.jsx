@@ -36,7 +36,7 @@ export default function Weather() {
     }, [cityName]);
 
     return (isLoading ? <></> :
-        <div className="weather-card">
+        <div className="weather-container">
             <div className="weather-header">
                 <div id="weatherTitle">{data.name}</div>
                 <div id="weatherTemp">{`${data.main.temp.toFixed(2)}°F`}</div>

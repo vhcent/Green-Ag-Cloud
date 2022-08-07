@@ -10,7 +10,7 @@ function App() {
             <Sidebar />
             <div className="main">
                 <Navbar />
-                {/* <LiveData /> */}
+                <LiveData />
                 <Weather />
             </div>
         </div>
