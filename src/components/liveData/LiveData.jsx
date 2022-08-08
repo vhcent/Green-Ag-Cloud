@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./LiveData.css";
-import { WiDaySunny } from "weather-icons-react";
 import { GrStatusGood, GrStatusCritical } from "react-icons/gr";
 
 function LiveData() {

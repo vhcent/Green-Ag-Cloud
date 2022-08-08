@@ -1,0 +1,27 @@
+.dropdown-countainer {
+    display: inline-grid;
+    /* grid-template-rows: 1fr 1fr; */
+}
+
+.dropdown-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    background: white;
+    font-size: 0.8rem;
+    font-weight: normal;
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-radius: 5px;
+    padding: 3px;
+    align-items: center;
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-list-item {
+    border: none;
+}
