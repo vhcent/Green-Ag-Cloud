@@ -1,0 +1,15 @@
+.home-solar {
+    width: 96%;
+    margin-left: 2%;
+}
+.home-solar .top {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-solar .top .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+}

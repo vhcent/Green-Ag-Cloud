@@ -5,6 +5,7 @@
     /* width: calc(100% - 255px); */
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .navbar-list {

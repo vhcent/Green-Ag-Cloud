@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import "./LiveData.css";
-import { GrStatusGood, GrStatusCritical } from "react-icons/gr";
+import Weather from "./weather/Weather.jsx";
+import Status from "./status/Status.jsx";
 
 function LiveData() {
-    const [status, setStatus] = useState("NOT OKAY");
     return (
         <div className="live-data-container">
             Live Data
-            <div className="status">
-                Status
-                {status == "OKAY" ? <div id="okay">{status}</div>
-                    : <div id="not-okay">{status}</div>}
-                {/* <div classname="status" id={status}>{status}</div> */}
+            <div className="live-data-main">
+                <Status />
+                <Weather />
             </div>
         </div>
     )
 }
 
-export default LiveData;
+export default LiveData

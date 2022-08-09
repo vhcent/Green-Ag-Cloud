@@ -14,4 +14,8 @@
     position: absolute;
     left: 255px;
     width: calc(100% - 255px);
+    height: 100%;
+    /* display: flex; */
+    /* display: flex; */
+    /* justify-content: center; */
 }
