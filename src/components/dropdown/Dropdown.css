@@ -1,6 +1,5 @@
 .dropdown-countainer {
     display: inline-grid;
-    /* grid-template-rows: 1fr 1fr; */
 }
 
 .dropdown-header {
@@ -11,7 +10,7 @@
     background: white;
     font-size: 0.8rem;
     font-weight: normal;
-    border: 1px solid rgba(0, 0, 0, .4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     padding: 5px;
     align-items: center;
@@ -20,11 +19,9 @@
 .dropdown-list {
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, .4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    border-top: 0;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top: none;
 }
 
 .dropdown-list-item {
@@ -32,4 +29,8 @@
     text-align: left;
     background: white;
     padding: 5px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    z-index: -1;
+    position: relative;
 }
