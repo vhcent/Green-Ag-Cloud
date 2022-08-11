@@ -1,0 +1,22 @@
+.power-data-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* margin-top: 1vh; */
+    gap: 3vh 1.5vw;
+}
+
+.power-item {
+    text-align: center;
+    /* padding: 30px; */
+    background-color: #e0e2e7;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.power-value {
+    padding: 8%;
+    color: #047b02;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

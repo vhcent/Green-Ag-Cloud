@@ -5,11 +5,16 @@
 .home-solar .top {
     display: flex;
     flex-direction: row;
+    gap: 3%;
 }
 
 .home-solar .top .left {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 35%;
+    width: 40%;
+}
+
+.home-solar .top .right {
+    width: 57%;
 }

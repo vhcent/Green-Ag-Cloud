@@ -1,10 +1,9 @@
 import React from 'react';
 import "./HomeSolar.css"
-// import Navbar from "../../../components/navbar/Navbar.jsx";
-// import Status from "../../../components/liveData/status/Status.jsx";
-// import Weather from "../../../components/liveData/weather/Weather.jsx";
-import LiveData from "../../../components/liveData/LiveData.jsx"
+import LiveData from "../../../components/solar/liveData/LiveData.jsx"
 import Dropdown from "../../../components/dropdown/Dropdown.jsx";
+import PowerData from "../../../components/solar/powerData/PowerData.jsx";
+import PanelData from "../../../components/solar/panelData/PanelData.jsx";
 
 function HomeSolar() {
     return (
@@ -15,10 +14,15 @@ function HomeSolar() {
                     <LiveData />
                 </div>
                 <div className="right">
-                    HELLO
+                    <PowerData />
                 </div>
             </div>
-            {/* <Weather /> */}
+            <div className="mid">
+                <PanelData />
+            </div>
+            <div className="bot">
+                Power Production Chart
+            </div>
         </div>
     )
 }
