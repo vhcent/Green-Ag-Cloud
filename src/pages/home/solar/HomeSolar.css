@@ -5,16 +5,34 @@
 .home-solar .top {
     display: flex;
     flex-direction: row;
-    gap: 3%;
+    gap: 2%;
 }
 
 .home-solar .top .left {
     display: flex;
+    flex-direction: row;
+    gap: 3%;
+    width: 45%;
+}
+
+.home-solar .top .left .dropdown-status {
+    display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 40%;
+    width: 45%;
+    gap: 20%;
+    align-items: center;
+}
+
+.home-solar .top .left .dropdown-status .status-container {
+    width: 75%;
+}
+
+.home-solar-weather {
+    width: 52%;
+    display: flex;
+    justify-content: center;
 }
 
 .home-solar .top .right {
-    width: 57%;
+    width: 53%;
 }

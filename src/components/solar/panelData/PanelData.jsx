@@ -15,6 +15,11 @@ function PanelData() {
                         <div
                             key={key}
                             className="panel"
+                            id={selected === val.id ? "selected" : ""}
+                            onClick={() => {
+                                // window.location.pathname = val.link;
+                                setSelected(val.id);
+                            }}
                         >
                             <BsFillSunFill id={val.status} size={30} />
                             <FaSolarPanel size={60} />

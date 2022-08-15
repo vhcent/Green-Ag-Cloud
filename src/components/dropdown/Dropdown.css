@@ -1,7 +1,8 @@
 .dropdown-countainer {
     display: inline-grid;
     position: relative;
-    width: 40%;
+    width: 100%;
+    /* width: 40%; */
 }
 
 .dropdown-header {

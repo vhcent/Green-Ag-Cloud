@@ -1,6 +1,9 @@
 import "./Weather.css";
 import { useEffect, useState } from "react";
-import "./Weather.css"
+import "./Weather.css";
+import { WiHumidity } from "react-icons/wi";
+import { FiWind } from "react-icons/fi";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 export default function Weather() {
     const [data, setData] = useState(null);
@@ -44,6 +47,19 @@ export default function Weather() {
             <div className="weather-content">
                 <img id="weatherIcon" src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="weather-icon" />
                 {data.weather[0].description}
+            </div>
+            <div className="humidity-wind">
+                <div id="weatherHumidity">
+                    <WiHumidity size={50} color={"blue"} />
+                    {`${data.main.humidity}%`}
+                </div>
+                <div id="weatherWind">
+                    <FiWind size={40} color={"gray"} />
+                    <div className="wind-description">
+                        {`${data.wind.speed} mph `}
+                        <AiOutlineArrowUp style={{ transform: `rotate(${data.wind.deg}deg)` }} size={25} />
+                    </div>
+                </div>
             </div>
         </div>)
         ;
