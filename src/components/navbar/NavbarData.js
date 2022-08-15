@@ -5,6 +5,7 @@ import { AiFillCamera } from "react-icons/ai";
 import { BiNetworkChart } from "react-icons/bi";
 import { IoIosSpeedometer } from "react-icons/io";
 
+
 export const NavbarData = [
     {
         title: "Solar",
