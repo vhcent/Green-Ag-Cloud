@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { NavbarData } from "./NavbarData";
-import SearchBar from "./searchBar/SearchBar.jsx"
+import SearchBar from "./searchBar/SearchBar.jsx";
+import { IoMdNotifications } from "react-icons/io";
 
 function Navbar() {
     const [active, setActive] = useState("Solar");
@@ -25,6 +26,8 @@ function Navbar() {
                     );
                 })}
                 <SearchBar />
+                <IoMdNotifications id="notification-icon" />
+                <div className="account-container">Kevin Gao</div>
             </ul>
         </div>
     );

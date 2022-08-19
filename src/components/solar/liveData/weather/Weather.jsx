@@ -15,7 +15,7 @@ export default function Weather() {
         let lat = 37.3352;
         let lon = -121.8811;
         fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e10d184c8db721edaa25dead64d7b0a5&units=imperial`
+            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=fdf35fc67815db0efe675bf84c8441e3&units=imperial`
         )
             .then((res) => res.json())
             .then((json) => {
@@ -24,6 +24,7 @@ export default function Weather() {
                 return setData(json);
             })
             .catch((err) => {
+                setIsLoading(false);
                 console.log(err);
                 return setData(err);
             });
@@ -33,19 +34,26 @@ export default function Weather() {
     // {`${data.main.temp.toFixed(2)}°F`}
     // {data.weather[0].description}
 
-
     useEffect(() => {
         fetchWeatherData();
     }, [cityName]);
 
-    return (isLoading ? <></> :
+    // setInterval(fetchWeatherData, 60000);
+
+    return isLoading ? (
+        <></>
+    ) : (
         <div className="weather-container">
             <div className="weather-header">
                 <div id="weatherTitle">{data.name}</div>
                 <div id="weatherTemp">{`${data.main.temp.toFixed(2)}°F`}</div>
             </div>
             <div className="weather-content">
-                <img id="weatherIcon" src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="weather-icon" />
+                <img
+                    id="weatherIcon"
+                    src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+                    alt="weather-icon"
+                />
                 {data.weather[0].description}
             </div>
             <div className="humidity-wind">
@@ -57,10 +65,13 @@ export default function Weather() {
                     <FiWind size={40} color={"gray"} />
                     <div className="wind-description">
                         {`${data.wind.speed} mph `}
-                        <AiOutlineArrowUp style={{ transform: `rotate(${data.wind.deg}deg)` }} size={25} />
+                        <AiOutlineArrowUp
+                            style={{ transform: `rotate(${data.wind.deg}deg)` }}
+                            size={25}
+                        />
                     </div>
                 </div>
             </div>
-        </div>)
-        ;
+        </div>
+    );
 }
